@@ -7,7 +7,8 @@ export const Container = styled(LinearGradient).attrs(() => ({
   start: { x: 0, y: 1 },
   end: { x: 0.5, y: 0 },
 }))`
-color: black;
+  color: black;
   flex: 1;
   justify-content: center;
+  align-items: center;
 `;

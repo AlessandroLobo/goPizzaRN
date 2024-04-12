@@ -8,6 +8,8 @@ import theme from '@src/theme';
 import { Signin } from '@src/screens/Signin';
 import { StatusBar } from 'expo-status-bar';
 
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
 
@@ -45,10 +47,12 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <View onLayout={onLayoutRootView} style={{ flex: 1 }}>
-        <StatusBar style="light" translucent backgroundColor='transparent' />
-        <Signin />
-      </View>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <View onLayout={onLayoutRootView} style={{ flex: 1 }}>
+          <StatusBar style="light" translucent backgroundColor='transparent' />
+          <Signin />
+        </View>
+      </GestureHandlerRootView>
     </ThemeProvider>
   );
 }
