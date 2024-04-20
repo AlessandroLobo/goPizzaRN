@@ -1,14 +1,15 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Text, View } from 'react-native';
-import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
-import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
-import * as SplashScreen from 'expo-splash-screen';
-import { ThemeProvider } from 'styled-components/native';
-import theme from '@src/theme';
-import { Signin } from '@src/screens/Signin';
-import { StatusBar } from 'expo-status-bar';
+import React, { useEffect, useState, useCallback } from "react";
+import { Text, View } from "react-native";
+import { useFonts, DMSans_400Regular } from "@expo-google-fonts/dm-sans";
+import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
+import * as SplashScreen from "expo-splash-screen";
+import { ThemeProvider } from "styled-components/native";
+import theme from "@src/theme";
+import { Product } from "@src/screens/Product";
+import { StatusBar } from "expo-status-bar";
 
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { AuthProvider } from "@src/hooks/auth";
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -28,8 +29,7 @@ export default function App() {
         if (fontsLoaded) {
           setAppIsReady(true);
         }
-      } catch (e) {
-      }
+      } catch (e) { }
     }
 
     prepare();
@@ -49,10 +49,14 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <View onLayout={onLayoutRootView} style={{ flex: 1 }}>
-          <StatusBar style="light" translucent backgroundColor='transparent' />
-          <Signin />
+          <StatusBar style="light" translucent backgroundColor="transparent" />
+
+          <AuthProvider>
+            <Product />
+          </AuthProvider>
         </View>
       </GestureHandlerRootView>
     </ThemeProvider>
   );
 }
+

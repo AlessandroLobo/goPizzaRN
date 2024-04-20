@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "509882194803",
+    "project_id": "igniteshoesapp-ac2ee",
+    "storage_bucket": "igniteshoesapp-ac2ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509882194803:android:866b30bb68b2a7767e8306",
+        "android_client_info": {
+          "package_name": "com.gopizza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoOmiRAsVbDoEBK-02EjhMuOHeIMHNgNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509882194803:android:cdab916aba2ebddd7e8306",
+        "android_client_info": {
+          "package_name": "igniteshoes.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoOmiRAsVbDoEBK-02EjhMuOHeIMHNgNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
