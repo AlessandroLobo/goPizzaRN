@@ -5,7 +5,7 @@ import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 import * as SplashScreen from "expo-splash-screen";
 import { ThemeProvider } from "styled-components/native";
 import theme from "@src/theme";
-import { Product } from "@src/screens/Product";
+import { Home } from "@src/screens/Home";
 import { StatusBar } from "expo-status-bar";
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -52,7 +52,7 @@ export default function App() {
           <StatusBar style="light" translucent backgroundColor="transparent" />
 
           <AuthProvider>
-            <Product />
+            <Home />
           </AuthProvider>
         </View>
       </GestureHandlerRootView>
