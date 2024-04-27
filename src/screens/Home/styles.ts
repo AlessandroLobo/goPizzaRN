@@ -37,3 +37,30 @@ export const GreetingText = styled.Text`
   `}
 `;
 
+export const MenuHeader = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 24px 0;
+    border-bottom-width: 1px;
+    border-bottom-color:${theme.COLORS.SHAPE};
+  `
+
+export const MenuItemNumber = styled.Text`
+    font-size: 14px;
+
+    ${({ theme }: { theme: any }) => css`
+      font-family: ${theme.FONTS.TEXT}; 
+      color: ${theme.COLORS.SECONDARY_900};
+    `}
+  `
+
+  export const Title = styled.Text`
+    font-size: 20px;
+    line-height: 20px;
+
+    ${({ theme }: { theme: any }) => css`
+      font-family: ${theme.FONTS.TITLE};
+      color: ${theme.COLORS.SECONDARY_900};
+    `}
+  `
